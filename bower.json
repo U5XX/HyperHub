@@ -1,0 +1,24 @@
+{
+  "name": "HyperHub",
+  "authors": [
+    "Simon Cedergren Malmqvist <simon.cedergren.malmqvist@afconsult.com>",
+    "Fredrik Andersson <fredrik.c.andersson@afconsult.com>"
+  ],
+  "description": "All your links are belong to us.",
+  "main": "",
+  "moduleType": [],
+  "license": "GPLv3",
+  "homepage": "https://hyperhub.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.8",
+    "bootstrap": "~3.3.5"
+  }
+}
