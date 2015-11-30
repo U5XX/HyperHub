@@ -8,3 +8,6 @@
 3. ...
 
 Later on, this project will need a backend.
+
+## Misc
+We try our best to follow the practices described here [johnpapa/angular-styleguide](https://github.com/johnpapa/angular-styleguide).

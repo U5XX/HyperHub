@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="hyperhub">
     <head>
+       <meta charset="UTF-8">
+       <title>HyperHub</title>
+
+       <!-- Bootstrap -->
+       <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+       <!-- Custom css -->
+       <link rel="stylesheet" href="css/app.css">
     </head>
 
-    <body>
-        <h1>HyperHub</h1>
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/angular/angular.js"></script>
+    <body class="center-block">        
+        <div class="page-header container">
+            Page header
+        </div>
+
+        <div class="list-container container panel">
+            List container
+        </div>
+        
+        <div class="insert-container container panel" ng-controller="InsertLinkController">
+            <!-- url input field -->
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-globe"></span></span>
+                <input type="text" class="form-control" placeholder="URL" aria-describedby="sizing-addon1">
+            </div>
+
+            <!-- tag input field -->
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-tags"></span></span>
+                <input id="tag-input" ng-model="data.tags" ng-change="tagsChange()" type="text" class="form-control" placeholder="Tags" aria-describedby="sizing-addon1">
+            </div>
+            
+            <div>
+                <span class="tag-label label label-default" ng-repeat="tag in tags">
+                    {{tag}}
+                    <span class="tag-btn-remove glyphicon glyphicon-remove" ng-click="removeTag($index)"></span>
+                </span>
+            </div>
+                                 
+        </div>
+
+       <script src="bower_components/jquery/dist/jquery.js"></script>
+       <script src="bower_components/angular/angular.js"></script>
+       <script src="scripts/app.js"></script>
+       <script src="scripts/controllers/InsertLinkController.js"></script>
     </body>
 </html>
